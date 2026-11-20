@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+
+#cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #f48fb1;
+
+}
+
+img {
+    max-height: 90px;
+}
+
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+#principal {
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+}
+
+.ejemplo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tarjeta {
+    width: 150px;
+    background-color: rgb(255, 209, 217);
+    border: 1px solid #f48fb1;
+    border-radius: 6px;
+    padding: 20px 15px;
+    text-align: center;
+
+}
