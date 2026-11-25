@@ -1,0 +1,129 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 15px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 250px 1fr auto;
+    grid-template-areas:     
+        "cabecera cabecera"
+        "hero     hero"
+        "lateral  contenido"     
+        "pie      pie";
+    gap: 15px;
+    min-height: 95vh;
+    text-align: center;
+}
+
+header { 
+    grid-area: cabecera;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 15px;
+} 
+
+aside { 
+    grid-area: lateral;
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    padding: 15px;
+} 
+
+main { 
+    grid-area: contenido;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+} 
+
+footer { 
+    grid-area: pie;
+    background-color: #343a40;
+    color: white;
+    padding: 15px;
+} 
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecera a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    max-height: 90px;
+}
+
+.ejemplo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.tarjeta {
+    width: 150px;
+    background-color: rgb(247, 205, 212);
+    padding: 5px;
+    text-align: center;
+}
+
+.hero {
+    grid-area: hero;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.contenido video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.tarjeta button {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta button:hover {
+    background-color: #fc5bac;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animada {
+    animation: aparecer 1s ease;
+}
